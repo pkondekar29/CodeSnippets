@@ -63,5 +63,5 @@ int main(){
 	PRINT_BUBBLE_SORT
 	bubbleSort(b, n);
 	printArray(b, n);
-	return 0;
+	return EXIT_SUCCESS;
 }
