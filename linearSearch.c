@@ -12,7 +12,6 @@ int main(){
 				printf("%d\n", i);
 				found = true;
 			}
-			
 		}
 		if(!found){
 			printf("-1\n");
