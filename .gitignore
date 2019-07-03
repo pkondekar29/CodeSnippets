@@ -1,6 +1,7 @@
 *.swp
 *~
 *.swo
-*[^.c]$
+!*\.c
+!*\.java
 a.exe
 *[.json]$
