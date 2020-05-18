@@ -3,5 +3,5 @@
 *.swo
 !*\.c
 !*\.java
-a.exe
 *[.json]$
+*.exe

@@ -1,3 +1,5 @@
+
+import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSum{
@@ -17,5 +19,6 @@ public class TwoSum{
             }
             hashMap.put(arr[i], i);
         }
+        return arr;
     }
 }

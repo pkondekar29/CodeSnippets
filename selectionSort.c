@@ -2,6 +2,7 @@
 #include<stdbool.h>
 #define PRINT_SELECTION_SORT printf("------ Selection Sort -------\n");
 #define PRINT_BUBBLE_SORT printf("------ Bubble Sort -------\n");
+#define PRINT_INSERTION_SORT printf("------ Insertion Sort -------\n");
 
 void swap(int *a, int *b){
 	int temp = *a;
@@ -10,18 +11,19 @@ void swap(int *a, int *b){
 }
 
 void printArray(int a[], int n){
-	for(int i = 0; i < n; i++){
+	int i;
+	for(i = 0; i < n; i++){
 		printf("%d ", a[i]);
 	}
 	printf("\n");
 }
 
 void selectionSort(int a[], int n){
-	int minNum, minPos; /* assuming max number is current number */
-	for(int i = 0; i < n; i++){
+	int i, j, minNum, minPos; /* assuming max number is current number */
+	for(i = 0; i < n; i++){
 		minPos = i;
 		minNum = a[minPos];
-		for(int j = i + 1; j < n; j++){
+		for(j = i + 1; j < n; j++){
 			if(a[j] < minNum){
 				minNum = a[j];
 				minPos = j;
@@ -33,10 +35,10 @@ void selectionSort(int a[], int n){
 }
 
 void bubbleSort(int a[], int n){
-	int swaps = 1;
-	for(int i = 0; i < n && swaps > 0; i++){
+	int i, j, swaps = 1;
+	for(i = 0; i < n && swaps > 0; i++){
 		swaps = 0;
-		for(int j = 0; j < n - i - 1; j++){
+		for(j = 0; j < n - i - 1; j++){
 			if(a[j] > a[j+1]){
 				swap(&a[j], &a[j+1]);
 				swaps++;
@@ -47,14 +49,30 @@ void bubbleSort(int a[], int n){
 	}
 }
 
+void insertionSort(int a[], int n){
+	int i, key, j; 
+	for (i = 1; i < n; i++) {
+		key = a[i]; 
+       	j = i - 1; 
+		while (j >= 0 && a[j] > key) 
+		{ 
+           a[j + 1] = a[j]; 
+           j--; 
+           printArray(a, n);
+       	} 
+       	a[j + 1] = key; 
+   	} 
+}
+
 int main(){
-	int n, curr;
+	int i, n, curr;
 	scanf("%d", &n);
-	int a[n], b[n];
-	for(int i = 0; i < n; i++){
+	int a[n], b[n], c[n];
+	for(i = 0; i < n; i++){
 		scanf("%d", &curr);
 		a[i] = curr;
 		b[i] = curr;
+		c[i] = curr;
 	}
 	PRINT_SELECTION_SORT
 	selectionSort(a, n);
@@ -63,5 +81,9 @@ int main(){
 	PRINT_BUBBLE_SORT
 	bubbleSort(b, n);
 	printArray(b, n);
-	return EXIT_SUCCESS;
+	
+	PRINT_INSERTION_SORT
+	insertionSort(c, n);
+	printArray(c, n);
+	return 0;
 }
