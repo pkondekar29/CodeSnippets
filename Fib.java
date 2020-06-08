@@ -1,3 +1,5 @@
+package CodeSnippets;
+
 import java.util.Scanner;
 
 public class Fib {

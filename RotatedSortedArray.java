@@ -1,5 +1,8 @@
+package CodeSnippets;
+
 import java.util.Scanner;
 
+@Deprecated
 public class RotatedSortedArray {
 
     public static void main(String[] args) {

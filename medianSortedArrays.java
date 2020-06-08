@@ -1,3 +1,4 @@
+package CodeSnippets;
 
 class medianSortedArrays {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {

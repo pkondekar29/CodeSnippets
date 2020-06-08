@@ -1,3 +1,4 @@
+package CodeSnippets;
 
 import java.util.HashMap;
 import java.util.Map;

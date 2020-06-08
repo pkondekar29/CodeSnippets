@@ -1,4 +1,4 @@
-
+package CodeSnippets;
 public class LongestPalimdrome {
     private static String longestPalindrome(String s) {
         String r = new StringBuilder().append(s).reverse().toString();

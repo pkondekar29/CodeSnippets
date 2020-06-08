@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Triplet{
+class Triplet {
         public int a;
         public int b;
         public int c;
