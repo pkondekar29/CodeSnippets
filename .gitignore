@@ -5,3 +5,4 @@
 !*\.java
 *[.json]$
 *.exe
+*.class
