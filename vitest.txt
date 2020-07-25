@@ -1,0 +1,16 @@
+This is a test file
+
+This will be used to learn vim.
+
+These are the basics of vim. 
+
+Lesson 1: Moving the cursor
+
+h is used to move left
+j is used to move up
+k is used to move down
+l is used to move right
+
+So, this is how you move in a file
+
+
